@@ -7,7 +7,7 @@
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $posts = query_posts([
-                    'post_type' => ['akcia'],
+                    'post_type' => 'akcia',
                     'paged' => $paged
                 ]);
                 ?>

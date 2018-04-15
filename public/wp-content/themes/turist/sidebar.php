@@ -12,7 +12,7 @@
         </div>
     </div>
     <?php
-    if(is_page('Список акций') or is_page_template('taxonomy.php')): ?>
+    if(end(explode('/',get_page_template()))=='page-stock.php'): ?>
     <div class="sidebar__sidebar-item">
         <div class="sidebar-item__title">Категории акций</div>
         <div class="sidebar-item__content">

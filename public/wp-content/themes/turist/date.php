@@ -4,6 +4,12 @@
         <div class="content">
             <h1 class="title-page">Поиск:</h1>
             <div class="posts-list">
+                <?php
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $posts = query_posts([
+                    'post_type' => ['post', 'akcia'],
+                    'paged' => $paged
+                ]);?>
                 <?php if (have_posts()) : while (have_posts()) :the_post(); ?>
                     <div class="post-wrap">
                         <div class="post-thumbnail"><img src="<?php echo own_wp_thumbnail(); ?>" alt="Image поста"
